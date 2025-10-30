@@ -1,0 +1,194 @@
+/* Pengaturan Dasar (Reset) */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Warna latar belakang halaman (abu-abu muda) */
+    color: #333; /* Warna teks utama */
+}
+
+.container {
+    width: 80%;
+    margin: auto; /* Trik untuk membuat konten ke tengah */
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* 1. Style Header */
+header {
+    background: #35424a; /* Warna latar header */
+    color: #ffffff; /* Warna teks header */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid; /* Garis bawah biru */
+}
+
+header h1 {
+    float: left; /* Nama sekolah di kiri */
+    font-size: 24px;
+}
+
+header nav {
+    float: right; /* Navigasi di kanan */
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none; /* Menghilangkan bullet points */
+}
+
+header nav ul li {
+    display: inline; /* Membuat menu jadi horizontal */
+    padding: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #0779e4; /* Warna saat mouse di atas link */
+}
+
+/* 2. Style Main Content */
+
+/* Bagian Hero */
+.hero {
+    min-height: 300px;
+    background: #0779e4; /* Latar biru cerah */
+    color: #ffffff;
+    text-align: center;
+    display: flex; /* Menggunakan flexbox untuk menengahkan */
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* UBAH: Style Section yang Umum */
+/* Kita buat setiap section jadi "kartu" putih */
+.section-white {
+    background: #ffffff; /* Latar belakang putih */
+    padding: 30px;
+    margin-top: 20px; /* Jarak antar section */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Bayangan halus */
+}
+
+.section-white h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #35424a;
+}
+
+/* BARU: Style untuk "Tentang Kami" */
+.tentang-content {
+    display: flex; /* Kunci: Membuat item di dalamnya berdampingan */
+    align-items: center; /* Membuat teks dan gambar sejajar di tengah (vertikal) */
+    gap: 30px; /* Jarak antara gambar dan teks */
+}
+
+.tentang-text {
+    flex: 2; /* Teks mengambil 2 bagian (lebih lebar) */
+}
+
+.tentang-img {
+    flex: 1; /* Gambar mengambil 1 bagian (lebih sempit) */
+}
+
+.tentang-img img {
+    width: 100%; /* Gambar akan mengisi penuh wadahnya */
+    border-radius: 5px; /* Sudut gambar melengkung */
+}
+
+
+/* BARU: Style untuk "Sambutan Kepala Sekolah" */
+.sambutan-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sambutan-text {
+    flex: 2; /* Teks di kiri */
+}
+
+.sambutan-text h4 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.sambutan-text p {
+    margin-top: 10px;
+}
+
+.sambutan-text p em { /* Teks "Kepala Sekolah" */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.sambutan-text p strong { /* Nama Kepala Sekolah */
+    color: #0779e4;
+    font-size: 1.1em;
+}
+
+.sambutan-img {
+    flex: 1; /* Gambar di kanan */
+    text-align: center;
+}
+
+.sambutan-img img {
+    width: 200px; /* Lebar foto profil */
+    height: 200px; /* Tinggi foto profil */
+    border-radius: 50%; /* Kunci: Membuat gambar menjadi bulat! */
+    object-fit: cover; /* Memastikan gambar tidak gepeng */
+    border: 5px solid #0779e4; /* Bingkai biru */
+}
+
+
+/* Style Bagian Jurusan */
+.jurusan-list {
+    display: flex; /* Membuat item jurusan berdampingan */
+    justify-content: space-around; /* Memberi jarak antar item */
+    gap: 20px; /* Jarak antar box */
+}
+
+.jurusan-item {
+    background: #f9f9f9; /* Warna box jurusan sedikit beda */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+    flex-basis: 30%; /* Setiap item mengambil sekitar 30% lebar */
+    transition: transform 0.3s ease; /* BARU: Efek animasi */
+}
+
+/* BARU: Efek hover untuk jurusan */
+.jurusan-item:hover {
+    transform: translateY(-5px); /* Mengangkat box saat di-hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.jurusan-item h4 {
+    color: #0779e4;
+    margin-bottom: 10px;
+}
+
+/* 3. Style Footer */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
